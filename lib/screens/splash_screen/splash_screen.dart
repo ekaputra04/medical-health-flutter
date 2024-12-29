@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medical_health/const/colors.dart';
-import 'package:medical_health/screens/home_screen/home_screen.dart';
 import 'package:medical_health/screens/welcome_screen/welcome_screen.dart'; // Update with your actual home screen path
 
 class SplashScreen extends StatefulWidget {

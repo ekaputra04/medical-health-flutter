@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:medical_health/const/colors.dart';
-import 'package:medical_health/screens/home_screen/home_screen.dart'; // Update with your actual home screen path
+import 'package:medical_health/screens/login_screen/login_screen.dart';
+import 'package:medical_health/widgets/button.dart'; // Update with your actual home screen path
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -46,22 +47,15 @@ class WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
+            PrimaryButton(
+              label: 'Get Started',
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
                 );
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: primaryColor, // Background color
-                foregroundColor: Colors.white, // Text color
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-                textStyle: const TextStyle(fontSize: 16), // Font size
-              ),
-              child: const Text('Get Started'),
-            ),
+            )
           ],
         ),
       ),
