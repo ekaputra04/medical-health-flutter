@@ -1,8 +1,7 @@
-// ignore_for_file: library_private_types_in_public_api, avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:medical_health/const/colors.dart';
-import 'package:medical_health/screens/home_screen/home_screen.dart'; // Update with your actual home screen path
+import 'package:medical_health/screens/home_screen/home_screen.dart';
+import 'package:medical_health/screens/welcome_screen/welcome_screen.dart'; // Update with your actual home screen path
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,14 +14,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _navigateToHome();
+    _navigateToWelcome();
   }
 
-  _navigateToHome() async {
+  _navigateToWelcome() async {
     await Future.delayed(Duration(seconds: 3), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => HomeScreen()),
+      MaterialPageRoute(builder: (context) => const WelcomeScreen()),
     );
   }
 
@@ -36,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: <Widget>[
             // Add your logo or splash image here
             Image.asset(
-              'images/tes.png',
+              'images/logo.png',
               fit: BoxFit.cover,
               width: 120,
             ),
